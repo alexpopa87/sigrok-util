@@ -175,7 +175,7 @@ $WGET https://github.com/pbatard/libwdi/releases/download/v1.2.5/zadig_xp-2.2.ex
 
 # libserialport
 $ECHO "component libserialport ..."
-$GIT_CLONE $REPO_BASE/libserialport
+$GIT_CLONE https://github.com/alexpopa87/libserialport.git
 cd libserialport
 ./autogen.sh
 ./configure $C $L
@@ -185,7 +185,7 @@ cd ..
 
 # libsigrok
 $ECHO "component libsigrok ..."
-$GIT_CLONE $REPO_BASE/libsigrok
+$GIT_CLONE https://github.com/alexpopa87/libsigrok.git
 cd libsigrok
 ./autogen.sh
 ./configure $C $L
@@ -195,7 +195,7 @@ cd ..
 
 # libsigrokdecode
 $ECHO "component libsigrokdecode ..."
-$GIT_CLONE $REPO_BASE/libsigrokdecode
+$GIT_CLONE https://github.com/alexpopa87/libsigrokdecode.git
 cd libsigrokdecode
 ./autogen.sh
 ./configure $C $L
@@ -205,7 +205,7 @@ cd ..
 
 # sigrok-firmware
 $ECHO "component sigrok-firmware ..."
-$GIT_CLONE $REPO_BASE/sigrok-firmware
+$GIT_CLONE https://github.com/alexpopa87/sigrok-firmware.git
 cd sigrok-firmware
 ./autogen.sh
 # Nothing gets cross-compiled here, we just need 'make install' basically.
@@ -215,7 +215,7 @@ cd ..
 
 # sigrok-firmware-fx2lafw
 $ECHO "component sigrok-firmware-fx2lafw ..."
-$GIT_CLONE $REPO_BASE/sigrok-firmware-fx2lafw
+$GIT_CLONE https://github.com/alexpopa87/sigrok-firmware-fx2lafw.git
 cd sigrok-firmware-fx2lafw
 ./autogen.sh
 # We're building the fx2lafw firmware on the host, no need to cross-compile.
@@ -226,14 +226,14 @@ cd ..
 
 # sigrok-dumps
 $ECHO "component sigrok-dumps ..."
-$GIT_CLONE $REPO_BASE/sigrok-dumps
+$GIT_CLONE https://github.com/alexpopa87/sigrok-dumps.git
 cd sigrok-dumps
 make install PREFIX=$PREFIX $V
 cd ..
 
 # sigrok-cli
 $ECHO "component sigrok-cli ..."
-$GIT_CLONE $REPO_BASE/sigrok-cli
+$GIT_CLONE https://github.com/alexpopa87/sigrok-cli.git
 cd sigrok-cli
 ./autogen.sh
 ./configure $C
@@ -248,7 +248,7 @@ cd ..
 
 # PulseView
 $ECHO "component pulseview ..."
-$GIT_CLONE $REPO_BASE/pulseview
+$GIT_CLONE https://github.com/alexpopa87/pulseview.git
 cd pulseview
 patch -p1 < ../../pulseview-boost-numeric-literals.patch
 patch -p1 < ../../pulseview-manual-pdf-hack.patch
